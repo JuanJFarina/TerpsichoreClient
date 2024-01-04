@@ -5,8 +5,8 @@ Front-End Client for the Terpsichore Project E-Learning Platform for Ballet Teac
 ## Installation
 
 ```
-git clone https://github.com/JuanJFarina/TerpsichoreServer.git
-cd TerpsichoreServer
+git clone https://github.com/JuanJFarina/TerpsichoreClient.git
+cd TerpsichoreClient
 npm install
 ```
 

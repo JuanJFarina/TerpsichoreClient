@@ -9,7 +9,8 @@
     "test": "ng test",
     "prepare": "husky install",
     "lint": "ng lint",
-    "format": "npx prettier . --write"
+    "format": "npx prettier . --write",
+    "format-staged": "git-format-staged -f 'prettier \"{}\"' ."
   },
   "private": true,
   "dependencies": {
@@ -38,6 +39,7 @@
     "@typescript-eslint/eslint-plugin": "6.13.1",
     "@typescript-eslint/parser": "6.13.1",
     "eslint": "^8.54.0",
+    "git-format-staged": "^3.0.0",
     "husky": "^8.0.0",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
