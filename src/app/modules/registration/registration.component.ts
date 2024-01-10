@@ -28,12 +28,7 @@ export class RegistrationComponent {
         Validators.minLength(4),
         Validators.maxLength(15)
       ]),
-    password_2: new FormControl<string>('',
-    [
-      Validators.required,
-      Validators.minLength(4),
-      Validators.maxLength(15)
-    ])
+    password_2: new FormControl<string>('', [Validators.required])
     
   }, [this.passwordMatch("password", "password_2")])
 
