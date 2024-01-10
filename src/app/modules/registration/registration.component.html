@@ -1,0 +1,132 @@
+<div class="w-screen h-[100svh] flex justify-center items-center bg-gray-100">
+    <div class="w-full max-w-xs">
+  
+      <form
+        class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 group"
+        [formGroup]="registerForm"
+      >
+  
+        <div class="mb-2">
+            <h1 class="text-gray-700 text-m font-bold mb-2">Registro de usuario</h1>
+          <label
+            class="block text-gray-700 text-sm font-bold mb-2"
+            for="username"
+          >
+            Usuario
+          </label>
+  
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="username"
+            type="text"
+            placeholder="Ingrese usuario"
+            formControlName="username"
+            required
+          >
+  
+          <span
+            *ngIf="registerForm.controls.username.errors && registerForm.controls.username.dirty"
+            class="mt-2 text-sm text-red-500"
+          >
+            Ingrese un usuario válido
+          </span>
+        
+          <label
+            class="mt-2 block text-gray-700 text-sm font-bold mb-2"
+            for="email"
+            >
+            Email
+            </label>
+
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="email"
+              type="text"
+              placeholder="Ingrese email"
+              formControlName="email"
+              required
+            >
+            <span
+            *ngIf="registerForm.controls.email.errors && registerForm.controls.email.dirty"
+            class="mt-2 text-sm text-red-500"
+            >
+            Ingrese un mail válido
+            </span>
+          
+        </div>
+  
+        <div class="mb-2">
+  
+          <label
+            class="block text-gray-700 text-sm font-bold mb-2"
+            for="password"
+          >
+            Contraseña
+          </label>
+  
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="password"
+            type="password"
+            placeholder="Ingrese contraseña"
+            formControlName="password"
+            required
+          >
+          <span
+            *ngIf="registerForm.controls.password.errors && registerForm.controls.password.dirty"
+            class="mt-2 text-sm text-red-500"
+          >
+            Contraseña inválida
+          </span>
+
+          <label
+            class="mt-2 block text-gray-700 text-sm font-bold mb-2"
+            for="password_2"
+          >
+            Confirmar contraseña
+          </label>
+  
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="password_2"
+            type="password"
+            placeholder="Confirme contraseña"
+            formControlName="password_2"
+            required
+          >
+  
+          <span
+            *ngIf="registerForm.errors?.['passwordMatch'] && registerForm.controls.password_2.dirty" 
+            class="mt-2 text-sm text-red-500"
+            
+          >
+            Las contraseñas no coinciden
+          </span>
+  
+        </div>
+
+        <div class="flex items-center justify-between pt-2">
+  
+          <button
+            class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline disabled:pointer-events-none disabled:opacity-30"
+            type="submit"
+            [disabled]="registerForm.invalid"
+          >
+            Registrarse
+          </button>
+  
+        </div>
+        <div class="flex justify-center items-center pt-2">
+          
+          <a
+            class="underline text-blue-800"
+            type=""
+            href="../login/"
+          >
+          Iniciar sesión
+          </a>
+        </div>
+      </form>
+      
+    </div>
+  </div>
