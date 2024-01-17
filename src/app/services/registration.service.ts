@@ -10,7 +10,7 @@ export class RegistrationService {
   #http = inject(HttpClient);
 
   register(data: User) {
-    return this.#http.post(`${environment.API_URL}/auth/login`, data)
+    return this.#http.post(`${environment.API_URL}/api/user/register`, data)
   }
 
   constructor() { }
