@@ -9,7 +9,7 @@ export class LoginService {
   #http = inject(HttpClient);
 
   login(username: string, password: string) {
-    return this.#http.post(`${environment.API_URL}/auth/login`, {
+    return this.#http.post(`${environment.API_URL}/api/auth/login`, {
       username,
       password,
     });
