@@ -1,5 +1,5 @@
 import { Injectable, signal } from '@angular/core';
-import { User } from '../../interfaces/user.interface';
+import { User } from '../../interfaces/User.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -24,4 +24,5 @@ export class CurrentUserService {
     localStorage.removeItem('currentUser');
     this.#currentUser.set(null);
   }
+  constructor() {}
 }
