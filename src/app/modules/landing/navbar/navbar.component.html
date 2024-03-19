@@ -6,13 +6,13 @@
         <a [routerLink]="'/'">Inicio</a>
       </li>
       <li routerLinkActive="text-maroon-1" [routerLinkActiveOptions]="{ exact: true }">
-        <a [routerLink]="'/about'">Sobre nosotros</a>
+        <a [routerLink]="routesEnum.LandingAbout">Sobre nosotros</a>
       </li>
       <li routerLinkActive="text-maroon-1" [routerLinkActiveOptions]="{ exact: true }">
-        <a [routerLink]="'/courses'">Cursos</a>
+        <a [routerLink]="routesEnum.LandingCourses">Cursos</a>
       </li >
       <li routerLinkActive="text-maroon-1" [routerLinkActiveOptions]="{ exact: true }">
-        <a [routerLink]="'/contact'">Contactanos</a>
+        <a [routerLink]="routesEnum.LandingContact">Contactanos</a>
       </li>
     </ul>
     <span class="flex font-medium text-normal gap-[10px]">

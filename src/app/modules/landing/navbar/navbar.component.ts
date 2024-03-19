@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-
+import { RoutesEnum } from '../../../constants/routes';
 @Component({
   selector: 'app-navbar',
   standalone: true,
@@ -9,5 +9,5 @@ import { RouterModule } from '@angular/router';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-
+  routesEnum = RoutesEnum
 }

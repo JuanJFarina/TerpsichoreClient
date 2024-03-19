@@ -9,24 +9,25 @@ import { HomeComponent } from './modules/landing/home/home.component';
 import { AboutComponent } from './modules/landing/about/about.component';
 import { ContactComponent } from './modules/landing/contact/contact.component';
 import { CoursesComponent } from './modules/landing/courses/courses.component';
+import { RoutesEnum } from './constants/routes';
 
 export const routes: Routes = [
     {
-        path: "", component: LandingComponent,
+        path: RoutesEnum.Home, component: LandingComponent,
         children: [
-            {path: '', component: HomeComponent},
-            {path: 'about', component: AboutComponent},
-            {path: 'contact', component: ContactComponent},
-            {path: 'courses', component: CoursesComponent}
+            {path: RoutesEnum.Home, component: HomeComponent},
+            {path: RoutesEnum.LandingAbout, component: AboutComponent},
+            {path: RoutesEnum.LandingContact, component: ContactComponent},
+            {path: RoutesEnum.LandingCourses, component: CoursesComponent}
         ]
     },
     {
-        path: "login", component: LoginComponent,
+        path: RoutesEnum.Login, component: LoginComponent,
         canActivate: [guestGuard]
     },
 
     {
-        path: "registration", component: RegistrationComponent,
+        path: RoutesEnum.Registration, component: RegistrationComponent,
         canActivate: [guestGuard]
     }
 ];
