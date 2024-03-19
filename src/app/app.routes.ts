@@ -5,20 +5,28 @@ import { RegistrationComponent } from './modules/registration/registration.compo
 // import { authGuard } from './guards/auth.guard';
 import { guestGuard } from './guards/guest.guard';
 import { LandingComponent } from './modules/landing/landing.component';
-import { HomeComponent } from './modules/landing/home/home.component';
-import { AboutComponent } from './modules/landing/about/about.component';
-import { ContactComponent } from './modules/landing/contact/contact.component';
-import { CoursesComponent } from './modules/landing/courses/courses.component';
 import { RoutesEnum } from './constants/routes';
 
 export const routes: Routes = [
     {
         path: RoutesEnum.Home, component: LandingComponent,
         children: [
-            {path: RoutesEnum.Home, component: HomeComponent},
-            {path: RoutesEnum.LandingAbout, component: AboutComponent},
-            {path: RoutesEnum.LandingContact, component: ContactComponent},
-            {path: RoutesEnum.LandingCourses, component: CoursesComponent}
+            {
+                path: RoutesEnum.Home, 
+                loadComponent: ()=> import('./modules/landing/home/home.component').then(m => m.HomeComponent)
+            },
+            {
+                path: RoutesEnum.LandingAbout,
+                loadComponent: ()=> import('./modules/landing/about/about.component').then(m => m.AboutComponent)
+            },
+            {
+                path: RoutesEnum.LandingContact,
+                loadComponent: ()=> import('./modules/landing/contact/contact.component').then(m => m.ContactComponent)
+            },
+            {
+                path: RoutesEnum.LandingCourses,
+                loadComponent: ()=> import('./modules/landing/courses/courses.component').then(m => m.CoursesComponent)
+            }
         ]
     },
     {
