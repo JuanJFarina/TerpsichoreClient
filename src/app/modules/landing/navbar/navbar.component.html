@@ -1,0 +1,23 @@
+<nav class="h-[100px] w-screen min-w-fit">
+  <div class="flex p-[40px] items-center justify-between">
+    <img src="assets/images/logo.svg" alt="logo">
+    <ul class="flex max-w-[580px] w-full justify-between text-blue-1 font-medium text-normal">
+      <li routerLinkActive="text-maroon-1" [routerLinkActiveOptions]="{ exact: true }">
+        <a [routerLink]="'/'">Inicio</a>
+      </li>
+      <li routerLinkActive="text-maroon-1" [routerLinkActiveOptions]="{ exact: true }">
+        <a [routerLink]="'/about'">Sobre nosotros</a>
+      </li>
+      <li routerLinkActive="text-maroon-1" [routerLinkActiveOptions]="{ exact: true }">
+        <a [routerLink]="'/courses'">Cursos</a>
+      </li >
+      <li routerLinkActive="text-maroon-1" [routerLinkActiveOptions]="{ exact: true }">
+        <a [routerLink]="'/contact'">Contactanos</a>
+      </li>
+    </ul>
+    <span class="flex font-medium text-normal gap-[10px]">
+      <button class="h-[40px] border-maroon-1 px-[24px] border-[1px] rounded-shape-m text-maroon-1">Inicia sesión</button>
+      <button class="h-[40px] border-maroon-1 px-[24px] border-[1px] bg-maroon-1 rounded-shape-m text-white">Crea tu cuenta</button>
+    </span>
+  </div>
+</nav>
