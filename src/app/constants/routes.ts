@@ -1,5 +1,8 @@
 export enum RoutesEnum {
 	Home = '',
 	Login = 'login',
-	Registration = 'registration'
+	Registration = 'registration',
+	LandingAbout = 'about',
+	LandingCourses = 'courses',
+	LandingContact = 'contact'
 }

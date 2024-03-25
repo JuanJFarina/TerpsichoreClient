@@ -7,11 +7,13 @@ module.exports = {
     extend: {
       fontFamily: {
         'Martel': ['Martel', 'serif'],
-        'Maven': ['Maven Pro', 'sans-serif']
+        'Maven': ['Maven Pro', 'sans-serif'],
+        'Inter': ['Inter', 'sans-serif']
       },
       fontWeight: {
         'black': '900',
         'bold': '700',
+        'semibold': '600',
         'medium': '500',
         'regular': '400'
       },
